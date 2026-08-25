@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0a0e14;
+    color: #ffffff;
+    padding: 60px 40px;
+}
+
+#hero h1 {
+    font-size: 48px;
+    color: #ffffff;
+}
+
+#hero p {
+    font-size: 18px;
+    color: #9ca3af;
+}
+
+#hero .tag {
+    color: #2dd4bf;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+#hero h1 {
+    font-size: 48px;
+    line-height: 1.3;
+}
+
+#hero .highlight {
+    color: #2dd4bf;
+}
+
+#hero .subtitle {
+    font-size: 18px;
+    color: #9ca3af;
+    max-width: 600px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    margin-right: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #2dd4bf;
+    color: #0a0e14;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #2dd4bf;
+}
+#about {
+    margin-top: 80px;
+}
+
+#about h2 {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+#about p {
+    font-size: 17px;
+    color: #9ca3af;
+    max-width: 650px;
+    line-height: 1.6;
+}
+#services {
+    margin-top: 80px;
+}
+
+#services h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.service-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #131824;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    padding: 25px;
+    flex: 1;
+    min-width: 220px;
+}
+
+.card h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #9ca3af;
+    font-size: 15px;
+    line-height: 1.5;
+}
+#portfolio {
+    margin-top: 80px;
+}
+
+#portfolio h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.portfolio-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+#contact {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#contact h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    color: #9ca3af;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.contact-links .btn {
+    margin-right: 15px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2dd4bf;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #2dd4bf;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0a0e14;
+    color: #ffffff;
+    padding: 60px 40px;
+    background-image: radial-gradient(#1f2937 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+.bg-swirl {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 600px;
+    z-index: -1;
+    opacity: 0.6;
+    animation: drift 15s ease-in-out infinite;
+}
+
+@keyframes drift {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    50%  { transform: translate(-20px, 20px) rotate(5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
