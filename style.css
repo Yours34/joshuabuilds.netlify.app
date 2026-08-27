@@ -1,262 +1,995 @@
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #0a0e14;
-    color: #ffffff;
-    padding: 60px 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f3;
+    color: #172f4d;
+    padding: 0;
 }
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 28px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #172f4d;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #172f4d;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #4d8c48;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+#hero {
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 40px 90px;
+
+    background-color: #f7f7f3;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+/* Hero text */
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px solid #173b63;
+
+    padding: 9px 14px;
+
+    margin-bottom: 25px;
+
+    color: #173b63;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.hero-label span {
+    width: 7px;
+    height: 7px;
+
+    display: inline-block;
+
+    background-color: #4d8c48;
+
+    border-radius: 50%;
+}
+
+
+/* Main heading */
 
 #hero h1 {
-    font-size: 48px;
-    color: #ffffff;
-}
+    margin: 0 0 30px;
 
-#hero p {
-    font-size: 18px;
-    color: #9ca3af;
-}
+    font-size: clamp(48px, 5vw, 76px);
+    line-height: 1.02;
 
-#hero .tag {
-    color: #2dd4bf;
-    font-size: 14px;
-    letter-spacing: 1px;
-}
+    font-weight: 700;
 
-#hero h1 {
-    font-size: 48px;
-    line-height: 1.3;
+    letter-spacing: -2.5px;
+
+    color: #142f4f;
 }
 
 #hero .highlight {
-    color: #2dd4bf;
+    color: #4d8c48;
 }
+
+
+/* Hero paragraph */
 
 #hero .subtitle {
+    max-width: 590px;
+
+    margin: 0 0 35px;
+
     font-size: 18px;
-    color: #9ca3af;
-    max-width: 600px;
+    line-height: 1.7;
+
+    color: #5d6875;
 }
 
+
+/* =========================================
+   BUTTONS
+========================================= */
+
 .buttons {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 14px 28px;
-    margin-right: 15px;
-    border-radius: 6px;
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 27px;
+
+    margin-right: 12px;
+
+    border-radius: 0;
+
     text-decoration: none;
-    font-weight: bold;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
 }
 
 .btn-primary {
-    background-color: #2dd4bf;
-    color: #0a0e14;
+    background-color: #142f4f;
+
+    color: #ffffff;
+
+    border: 1px solid #142f4f;
+}
+
+.btn-primary:hover {
+    background-color: #4d8c48;
+
+    border-color: #4d8c48;
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #ffffff;
-    border: 1px solid #2dd4bf;
+
+    color: #142f4f;
+
+    border: 1px solid #142f4f;
 }
+
+.btn-secondary:hover {
+    background-color: #142f4f;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-image img {
+    display: block;
+
+    width: 100%;
+    height: 560px;
+
+    object-fit: cover;
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 25px 60px rgba(20, 47, 79, 0.12);
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
 #about {
-    margin-top: 80px;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 100px 40px;
 }
 
 #about h2 {
-    font-size: 32px;
-    color: #ffffff;
+    margin-bottom: 25px;
+
+    font-size: 42px;
+
+    color: #142f4f;
 }
 
 #about p {
-    font-size: 17px;
-    color: #9ca3af;
-    max-width: 650px;
-    line-height: 1.6;
+    max-width: 750px;
+
+    font-size: 18px;
+
+    color: #5d6875;
+
+    line-height: 1.8;
 }
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
 #services {
-    margin-top: 80px;
+    padding: 100px 40px;
+
+    background-color: #eef0eb;
 }
 
 #services h2 {
-    font-size: 32px;
-    color: #ffffff;
-    margin-bottom: 30px;
+    max-width: 1100px;
+
+    margin: 0 auto 40px;
+
+    font-size: 42px;
+
+    color: #142f4f;
 }
 
 .service-cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
 }
 
+
+/* =========================================
+   CARDS
+========================================= */
+
 .card {
-    background-color: #131824;
-    border: 1px solid #1f2937;
-    border-radius: 8px;
+    background-color: #ffffff;
+
+    border: 1px solid #e1e3df;
+
+    border-radius: 2px;
+
     padding: 25px;
-    flex: 1;
-    min-width: 220px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(20, 47, 79, 0.10);
+}
+
+.card img {
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: cover;
+
+    border-radius: 2px;
+
+    margin-bottom: 18px;
 }
 
 .card h3 {
-    color: #ffffff;
+    margin: 0 0 12px;
+
+    color: #142f4f;
+
     font-size: 20px;
-    margin-bottom: 10px;
 }
 
 .card p {
-    color: #9ca3af;
+    margin: 0;
+
+    color: #66717d;
+
     font-size: 15px;
-    line-height: 1.5;
+
+    line-height: 1.6;
 }
+
+
+/* =========================================
+   PORTFOLIO
+========================================= */
+
 #portfolio {
-    margin-top: 80px;
+    padding: 100px 40px;
+
+    background-color: #f7f7f3;
 }
 
 #portfolio h2 {
-    font-size: 32px;
-    color: #ffffff;
-    margin-bottom: 30px;
+    max-width: 1100px;
+
+    margin: 0 auto 40px;
+
+    font-size: 42px;
+
+    color: #142f4f;
 }
 
 .portfolio-cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
 }
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
 #contact {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    padding: 100px 40px;
+
+    text-align: center;
+
+    background-color: #eef0eb;
 }
 
 #contact h2 {
-    font-size: 32px;
-    color: #ffffff;
-    margin-bottom: 10px;
+    margin: 0 0 15px;
+
+    font-size: 42px;
+
+    color: #142f4f;
 }
 
 #contact p {
-    color: #9ca3af;
-    font-size: 17px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+
+    color: #66717d;
+
+    font-size: 18px;
 }
 
 .contact-links .btn {
-    margin-right: 15px;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 60px;
+    margin: 5px;
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #2dd4bf;
+
+/* =========================================
+   MORE PRODUCTS / WHATSAPP CTA
+========================================= */
+
+.more-products {
+    max-width: 700px;
+
+    margin: 70px auto 40px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background-color: #eef0eb;
+
+    border: 1px solid #dde1da;
 }
 
-.nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 15px;
+.more-products h2 {
+    margin: 0 0 12px;
+
+    font-size: 30px;
+
+    color: #142f4f;
 }
 
-.nav-links a:hover {
-    color: #2dd4bf;
+.more-products p {
+    margin: 0 0 25px;
+
+    color: #66717d;
+
+    line-height: 1.7;
 }
-body {
+
+.more-products .btn {
+    display: inline-flex;
+
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #0a0e14;
-    color: #ffffff;
-    padding: 60px 40px;
-    background-image: radial-gradient(#1f2937 1px, transparent 1px);
-    background-size: 24px 24px;
-}
-.bg-swirl {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 600px;
-    height: 600px;
-    z-index: -1;
-    opacity: 0.6;
-    animation: drift 15s ease-in-out infinite;
 }
 
-@keyframes drift {
-    0%   { transform: translate(0, 0) rotate(0deg); }
-    50%  { transform: translate(-20px, 20px) rotate(5deg); }
-    100% { transform: translate(0, 0) rotate(0deg); }
-}
-body.light-theme {
-    background-color: #fdf6e3;
-    color: #2b2b2b;
-    background-image: none;
-}
 
-body.light-theme nav .logo {
-    color: #d97706;
-}
-
-body.light-theme .nav-links a {
-    color: #2b2b2b;
-}
-
-body.light-theme .nav-links a:hover {
-    color: #d97706;
-}
+/* =========================================
+   SHOP PAGE
+========================================= */
 
 #shop-hero {
+    padding: 80px 40px 50px;
+
     text-align: center;
-    margin-bottom: 50px;
+
+    background-color: #f7f7f3;
 }
 
 #shop-hero h1 {
-    font-size: 40px;
-    color: #2b2b2b;
+    margin: 0 0 15px;
+
+    font-size: 52px;
+
+    color: #142f4f;
 }
 
 #shop-hero p {
-    color: #555555;
-    font-size: 17px;
+    margin: 0 auto;
+
+    max-width: 650px;
+
+    color: #66717d;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+#products {
+    padding: 50px 40px 100px;
+
+    background-color: #f7f7f3;
 }
 
 .product-cards {
-    display: flex;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .product-card {
     background-color: #ffffff;
-    border: 1px solid #e5d9b6;
-    border-radius: 10px;
+
+    border: 1px solid #e1e3df;
+
     padding: 20px;
-    width: 250px;
+
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(20, 47, 79, 0.10);
 }
 
 .product-card img {
     width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    margin-bottom: 18px;
 }
 
 .product-card h3 {
-    color: #2b2b2b;
-    margin-bottom: 5px;
+    margin: 5px 0 10px;
+
+    color: #142f4f;
+
+    font-size: 21px;
 }
 
 .product-card .price {
-    color: #d97706;
-    font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+
+    color: #4d8c48;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        padding: 25px 30px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    #hero {
+        padding: 60px 30px 80px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    #hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-image img {
+        height: 450px;
+    }
+
+    .service-cards,
+    .portfolio-cards,
+    .product-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #about,
+    #services,
+    #portfolio,
+    #contact,
+    #products {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 25px 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 16px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    #hero {
+        padding: 50px 20px 70px;
+    }
+
+    #hero h1 {
+        font-size: 43px;
+
+        letter-spacing: -1.5px;
+    }
+
+    #hero .subtitle {
+        font-size: 17px;
+    }
+
+    .hero-label {
+        font-size: 10px;
+
+        letter-spacing: 1.3px;
+    }
+
+    .buttons {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+
+        margin: 0;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    #about,
+    #services,
+    #portfolio,
+    #contact,
+    #products {
+        padding: 70px 20px;
+    }
+
+    #about h2,
+    #services h2,
+    #portfolio h2,
+    #contact h2 {
+        font-size: 34px;
+    }
+
+    .service-cards,
+    .portfolio-cards,
+    .product-cards {
+        grid-template-columns: 1fr;
+    }
+
+    #shop-hero {
+        padding: 60px 20px 40px;
+    }
+
+    #shop-hero h1 {
+        font-size: 42px;
+    }
+
+    .product-card img {
+        height: 300px;
+    }
+
+    .more-products {
+        margin-top: 50px;
+
+        padding: 35px 20px;
+    }
+}
+/* =========================================
+   VISION PAGE
+========================================= */
+
+.vision-hero {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 90px 40px 70px;
+}
+
+.vision-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    padding: 9px 14px;
+
+    border: 1px solid #173b63;
+
+    color: #173b63;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.vision-label span {
+    width: 7px;
+
+    height: 7px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    background-color: #4d8c48;
+}
+
+.vision-hero h1 {
+    max-width: 900px;
+
+    margin: 0 0 30px;
+
+    color: #142f4f;
+
+    font-size: clamp(48px, 6vw, 72px);
+
+    line-height: 1.02;
+
+    letter-spacing: -2.5px;
+}
+
+.vision-hero h1 span {
+    color: #4d8c48;
+
+    display: block;
+}
+
+.vision-hero > p {
+    max-width: 780px;
+
+    margin: 0;
+
+    color: #5d6875;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   VISION PRINCIPLES
+========================================= */
+
+.vision-principles {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 20px 40px 100px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.vision-card {
+    min-height: 310px;
+
+    padding: 30px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dfe3dd;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(20, 47, 79, 0.10);
+}
+
+.vision-number {
+    color: #4d8c48;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.vision-card-content h2 {
+    margin: 0 0 18px;
+
+    color: #142f4f;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+}
+
+.vision-card-content p {
+    margin: 0;
+
+    color: #66717d;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   VISION CTA
+========================================= */
+
+.vision-cta {
+    padding: 100px 40px;
+
+    text-align: center;
+
+    background-color: #eef0eb;
+}
+
+.vision-cta-label {
+    margin: 0 0 15px;
+
+    color: #4d8c48;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.vision-cta h2 {
+    max-width: 750px;
+
+    margin: 0 auto 20px;
+
+    color: #142f4f;
+
+    font-size: clamp(40px, 5vw, 60px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.vision-cta h2 span {
+    color: #4d8c48;
+}
+
+.vision-cta > p:not(.vision-cta-label) {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    color: #66717d;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   VISION MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .vision-hero {
+        padding: 70px 30px 50px;
+    }
+
+    .vision-principles {
+        grid-template-columns: 1fr;
+
+        padding: 20px 30px 70px;
+    }
+
+    .vision-card {
+        min-height: auto;
+
+        gap: 50px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .vision-hero {
+        padding: 55px 20px 45px;
+    }
+
+    .vision-hero h1 {
+        font-size: 43px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .vision-hero > p {
+        font-size: 17px;
+    }
+
+    .vision-principles {
+        padding: 20px 20px 60px;
+    }
+
+    .vision-card {
+        padding: 25px;
+
+        gap: 45px;
+    }
+
+    .vision-card-content h2 {
+        font-size: 23px;
+    }
+
+    .vision-cta {
+        padding: 75px 20px;
+    }
+
 }
